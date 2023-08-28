@@ -2,7 +2,6 @@
 
 ## Part one : Libc functions
 
-```
 - isalpha
 - isdigit
 - isalnum
@@ -24,12 +23,11 @@
 - memcmp
 - strnstr
 - atoi
-```
+
 
 using malloc :
-```
+
 - calloc
 - strdup
-```
 
 
