@@ -2,7 +2,7 @@
 
 ## Part one : Libc functions
 
-- [ ] isalpha
+- [ ] `isalpha`
 - [ ] isdigit
 - [ ] isalnum
 - [ ] isascii
