@@ -2,10 +2,10 @@
 
 ## Part one : Libc functions
 
-> isalpha
-> isdigit
-> isalnum
-> isascii
+- [] isalpha
+- [  ] isdigit
+- [] isalnum
+- [] isascii
 - isprint
 - strlen
 - memset
