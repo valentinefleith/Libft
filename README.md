@@ -7,7 +7,7 @@ Libft is the first 42's common core's project. It aims to code a C library regro
 - [x] [`ft_isalpha`](/library/ft_isalpha.c)
 - [x] [`ft_isdigit`](/library/ft_isdigit.c)
 - [x] [`ft_isalnum`](/library/ft_isalnum.c)
-- [ ] `ft_isascii`
+- [x] [`ft_isascii`](/library/ft_isascii.c)
 - [ ] `ft_isprint`
 - [ ] `ft_strlen`
 - [ ] `ft_memset`
