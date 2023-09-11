@@ -14,14 +14,17 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t length = 0;
+	size_t	length;
+
+	length = 0;
 	while (str[length])
 		length++;
-	return length;
+	return (length);
 }
 
 /*
 #include <stdio.h>
+
 int	main(void)
 {
 	printf("%li\n", ft_strlen("hello"));

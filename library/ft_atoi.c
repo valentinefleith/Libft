@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	char_is_in_str(char c, const char *str);
+static int			char_is_in_str(char c, const char *str);
 static unsigned int	ft_unsigned_atoi(const char *str);
 
 int	ft_atoi(const char *str)
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 
 static unsigned int	ft_unsigned_atoi(const char *str)
 {
-	int output;
+	int	output;
 
 	output = 0;
 	while (char_is_in_str(*str, "0123456789"))
@@ -35,23 +35,23 @@ static unsigned int	ft_unsigned_atoi(const char *str)
 		output = output * 10 + (*str - '0');
 		str++;
 	}
-	return output;
+	return (output);
 }
 
-static int char_is_in_str(char c, const char *str)
+static int	char_is_in_str(char c, const char *str)
 {
 	while (*str)
 	{
 		if (*str == c)
-			return 1;
+			return (1);
 		str++;
 	}
-	return 0;
+	return (0);
 }
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	printf("%i\n", ft_atoi("   			\n-42fddfj"));
 }
