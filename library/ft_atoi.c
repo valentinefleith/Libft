@@ -6,12 +6,12 @@
 /*   By: val <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 16:46:39 by val               #+#    #+#             */
-/*   Updated: 2023/09/01 17:20:44 by val              ###   ########.fr       */
+/*   Updated: 2023/09/11 11:37:43 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	char_is_in_str(char c, const char *str);
-unsigned int	ft_unsigned_atoi(const char *str);
+static int	char_is_in_str(char c, const char *str);
+static unsigned int	ft_unsigned_atoi(const char *str);
 
 int	ft_atoi(const char *str)
 {
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 	return (ft_unsigned_atoi(str));
 }
 
-unsigned int	ft_unsigned_atoi(const char *str)
+static unsigned int	ft_unsigned_atoi(const char *str)
 {
 	int output;
 
@@ -38,7 +38,7 @@ unsigned int	ft_unsigned_atoi(const char *str)
 	return output;
 }
 
-int char_is_in_str(char c, const char *str)
+static int char_is_in_str(char c, const char *str)
 {
 	while (*str)
 	{
