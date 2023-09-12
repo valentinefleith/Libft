@@ -6,11 +6,11 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:39:26 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/12 10:25:16 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:15:31 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

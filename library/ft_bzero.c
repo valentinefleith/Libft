@@ -6,11 +6,11 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:15:56 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/12 15:19:24 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:16:23 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

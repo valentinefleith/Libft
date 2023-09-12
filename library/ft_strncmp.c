@@ -6,11 +6,11 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:38:18 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/12 11:45:39 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:16:38 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

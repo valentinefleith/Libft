@@ -6,11 +6,11 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:16:00 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/12 11:29:28 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:15:43 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
