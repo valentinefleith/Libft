@@ -6,7 +6,7 @@
 /*   By: val <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 12:33:55 by val               #+#    #+#             */
-/*   Updated: 2023/09/12 10:38:21 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/12 11:43:01 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str);
 char	*ft_itoa(int n);
 
 size_t	ft_strlen(const char *s);
-int	ft_strncmp(const char *s1, char *s2, size_t size);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
