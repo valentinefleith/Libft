@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 11:39:26 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/12 10:25:16 by vafleith         ###   ########.fr       */
+/*   Created: 2023/09/12 10:27:20 by vafleith          #+#    #+#             */
+/*   Updated: 2023/09/12 10:38:46 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-size_t	ft_strlen(const char *str)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	length;
+	size_t	i;
 
-	length = 0;
-	while (str[length])
-		length++;
-	return (length);
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)s)[i] = c;
+		i++;
+	}
+	return (s);
 }
 
 /*
 #include <stdio.h>
+#include <string.h>
+#define BUFFER_SIZE 64
 
 int	main(void)
 {
-	printf("%li\n", ft_strlen("hello"));
+	char	str[BUFFER_SIZE];
+
+	strcpy(str, "hello salut ca va");
+	printf("%s\n", str);
+	ft_memset(str, 'a', 5);
+	printf("%s\n", str);
 }
 */
