@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:27:20 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/12 16:15:54 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:07:34 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
+	unsigned char* bytes;
 
 	i = 0;
+	bytes = s;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] = c;
+		bytes[i] = c;
 		i++;
 	}
 	return (s);
