@@ -6,9 +6,11 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 22:28:15 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/23 22:35:32 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/24 00:01:05 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memcpy(void *dest, const void *src, size_t n)
 {
