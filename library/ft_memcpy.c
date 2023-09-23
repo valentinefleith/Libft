@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 16:33:56 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/20 11:14:49 by vafleith         ###   ########.fr       */
+/*   Created: 2023/09/23 22:28:15 by vafleith          #+#    #+#             */
+/*   Updated: 2023/09/23 22:35:32 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchar(const char *s, int c)
+void	*memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	const char	*src_cpy;
+	char		*dest_cpy;
+	int			i;
 
-	i = ft_strlen(s) - 1;
-	while (i >= 0 && s[i] != c)
-		i--;
-	if (i)
-		return (&s[i]);
-	return (NULL);
+	i = 0;
+	src_cpy = src;
+	dest_cpy = dest;
+	while (i < n)
+	{
+		dest_cpy[i] = src_cpy[i];
+		i++;
+	}
+	return (dest);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char str[] = "hello world";
-	printf("%s\n", ft_strrchar(str, 'w'));
-}
-*/

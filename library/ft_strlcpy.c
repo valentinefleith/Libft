@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:16:00 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/12 16:15:43 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:08:13 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
-
 /*
 #include <stdio.h>
 #define BUFFER_SIZE 64
