@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:15:56 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/15 22:12:39 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/23 23:58:04 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	return (ft_memset(s, '\0', n));
+	ft_memset(s, '\0', n);
 }
