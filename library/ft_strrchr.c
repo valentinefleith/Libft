@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:33:56 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/24 23:19:07 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/25 00:15:56 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchar(const char *s, int c)
 	while (i != 0 && s[i] != c)
 		i--;
 	if (i)
-		return (char *)(&s[i]);
+		return ((char *)(&s[i]));
 	return (NULL);
 }
 /*
