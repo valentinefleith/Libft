@@ -30,3 +30,8 @@ $(BUILD_DIR)/%.o: %.c $(LIB_H)
 clean:
 	@echo Cleaning up objects files
 	@$(RM) -r $(BUILD_DIR)
+
+.PHONY: fclean
+fclean: clean
+		@echo Cleaning up lib
+		@rm -rf $(LIB)

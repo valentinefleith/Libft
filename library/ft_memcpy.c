@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 22:28:15 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/24 00:01:05 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/24 23:19:44 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*memcpy(void *dest, const void *src, size_t n)
 {
 	const char	*src_cpy;
 	char		*dest_cpy;
-	int			i;
+	size_t			i;
 
 	i = 0;
 	src_cpy = src;
