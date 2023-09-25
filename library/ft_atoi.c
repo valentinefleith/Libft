@@ -6,13 +6,13 @@
 /*   By: val <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 16:46:39 by val               #+#    #+#             */
-/*   Updated: 2023/09/12 17:16:09 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:43:57 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	ft_unsigned_atoi(const char *str);
+static unsigned int	ft_atoui(const char *str);
 
 int	ft_atoi(const char *str)
 {
@@ -21,12 +21,12 @@ int	ft_atoi(const char *str)
 	if (*str == '-')
 	{
 		str++;
-		return (-ft_unsigned_atoi(str));
+		return (-ft_atoui(str));
 	}
-	return (ft_unsigned_atoi(str));
+	return (ft_atoui(str));
 }
 
-static unsigned int	ft_unsigned_atoi(const char *str)
+static unsigned int	ft_atoui(const char *str)
 {
 	int	output;
 
