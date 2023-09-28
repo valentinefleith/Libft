@@ -23,7 +23,7 @@ Libft is the first 42's common core's project. It aims to code a C library regro
 - [x] [`ft_strncmp`](/library/ft_strncmp.c)
 - [ ] `ft_memchr`
 - [x] [`ft_memcmp`](/library/ft_memcmp.c)
-- [ ] `ft_strnstr`
+- [x] [`ft_strnstr`](/library/ft_strnstr.c)
 - [x] [`ft_atoi`](/library/ft_atoi.c)
 
 - [ ] `ft_calloc`

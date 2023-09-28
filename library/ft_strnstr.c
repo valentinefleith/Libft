@@ -6,14 +6,14 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:20:57 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/26 13:56:46 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/09/28 11:34:27 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // Version 1 which seems to work
-/*
 
+/*
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (!*needle)
 		return ((char *)haystack);
 	i = 0;
-	while (i < len && haystack[i])
+	while (i + ft_strlen(needle) < len && haystack[i]) // To verify
 	{
 		j = 0;
 		while (haystack[i + j] && haystack[i + j] == needle[j])
@@ -37,7 +37,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 */
 
-// Version 2, more elegant but not sure it's working
+// Version 2, cleaner but not sure it's working
 
 static int	is_a_match(char *haystack, char *needle);
 
@@ -46,7 +46,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t i;
 
 	i = 0;
-	while (haystack[i] && i < len)
+	while (haystack[i] && i + ft_strlen(needle) < len) // To verify
 	{
 		if (is_a_match((char *)&haystack[i], (char *)needle))
 			return (char *)&haystack[i];
