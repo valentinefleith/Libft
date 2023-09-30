@@ -17,8 +17,8 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const char	*src_cpy;
-	char	*dest_cpy;
-	size_t i;
+	char		*dest_cpy;
+	size_t		i;
 
 	i = 0;
 	src_cpy = src;
@@ -29,5 +29,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			dest_cpy[i] = src_cpy[i];
 		i++;
 	}
-	return dest;
+	return (dest);
 }

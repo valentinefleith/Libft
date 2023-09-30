@@ -16,8 +16,8 @@
 /*
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	if (!*needle)
 		return ((char *)haystack);
@@ -43,30 +43,30 @@ static int	is_a_match(char *haystack, char *needle);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (haystack[i] && i + ft_strlen(needle) < len) // To verify
 	{
 		if (is_a_match((char *)&haystack[i], (char *)needle))
-			return (char *)&haystack[i];
+			return ((char *)&haystack[i]);
 		i++;
 	}
-	return NULL;
+	return (NULL);
 }
 
 static int	is_a_match(char *haystack, char *needle)
 {
-	while(*needle && *haystack)
+	while (*needle && *haystack)
 	{
 		if (*needle != *haystack)
-			return 0;
+			return (0);
 		needle++;
 		haystack++;
 	}
 	if (!*haystack && *needle)
-		return 0;
-	return 1;
+		return (0);
+	return (1);
 }
 
 /*
@@ -138,6 +138,5 @@ int	main(void)
 	test_str_str("Short", "Short");
 	test_str_str("nfjkdsShort", "Short");
 	test_str_str("Shor", "");
-
 }
 */
