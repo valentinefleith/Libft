@@ -6,12 +6,15 @@
 /*   By: val <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 12:33:55 by val               #+#    #+#             */
-/*   Updated: 2023/09/30 22:43:27 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/10/01 14:36:03 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define TRUE 1
+# define FALSE 0
 
 # include <stddef.h>
 # include <stdlib.h>
