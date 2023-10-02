@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:34:40 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/01 15:02:25 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/10/02 11:00:54 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_count_words(char *str, char c);
 static char	*ft_get_end_of_word(char *start, char c);
-static char	*ft_substrdup(char *start, char *end, char c);
+static char	*ft_substrdup(char *start, char *end);
 
 char	**ft_split(char const *s, char c)
 {
@@ -33,7 +33,7 @@ char	**ft_split(char const *s, char c)
 	while (count < ft_count_words((char *)s, c) && *start)
 	{
 		end = ft_get_end_of_word(start, c);
-		strs[count++] = ft_substrdup(start, end, c);
+		strs[count++] = ft_substrdup(start, end);
 		start = end;
 		while (*s == c)
 			start++;
@@ -78,7 +78,7 @@ static char	*ft_get_end_of_word(char *start, char c)
 }
 
 
-static char	*ft_substrdup(char *start, char *end, char c)
+static char	*ft_substrdup(char *start, char *end)
 {
 	char	*duplicate;
 	size_t	size_of_str_nul;
@@ -89,4 +89,22 @@ static char	*ft_substrdup(char *start, char *end, char c)
 		return duplicate;
 	ft_strlcpy(duplicate, start, size_of_str_nul);
 	return duplicate;
+}
+
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char	**result;
+
+	char test[] = "hello*world*gd";
+	char sep = '*';
+	int word_count = ft_count_words(test, sep);
+	result = ft_split(test, sep);
+	printf("%i words :\n", word_count);
+	for (int i = 0; result[i]; i++)
+	{
+		printf("%s\n", result[i]);
+	}
 }
