@@ -14,12 +14,12 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
-	size_t index;
+	char	*substr;
+	size_t	index;
 
 	substr = malloc(1 + len * sizeof(char));
 	if (substr == NULL)
-		return NULL;
+		return (NULL);
 	index = 0;
 	while (index < len)
 	{
@@ -28,19 +28,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 	}
 	substr[index] = '\0';
-	return substr;
+	return (substr);
 }
 
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	unsigned int start = 3;
-	size_t len = 4;
+	unsigned int	start;
+	size_t			len;
+	char			*substr;
+
+	start = 3;
+	len = 4;
 	char test[] = "012345678";
-	char *substr = ft_substr(test, start, len);
-	printf("trying to create a substring from ** %s ** starting at index %i\n", test, start);
+	substr = ft_substr(test, start, len);
+	printf("trying to create a substring from ** %s ** starting at index %i\n",
+		test, start);
 	printf("of size %lu\n", len);
 	printf("the substring is : %s\n", substr);
 }

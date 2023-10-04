@@ -19,14 +19,14 @@ char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	char	*start;
-	int	count;
+	int		count;
 	char	*end;
-	int word_count;
+	int		word_count;
 
 	word_count = ft_count_words((char *)s, c);
 	strs = malloc((1 + word_count * sizeof(char *)));
 	if (strs == NULL)
-		return NULL;
+		return (NULL);
 	while (*s == c)
 		s++;
 	start = (char *)s;
@@ -45,11 +45,11 @@ char	**ft_split(char const *s, char c)
 
 static int	ft_count_words(char *str, char c)
 {
-	int count;
+	int	count;
 	int	is_new_word;
 
 	if (!str)
-		return 0;
+		return (0);
 	count = 0;
 	is_new_word = TRUE;
 	while (*str)
@@ -62,19 +62,18 @@ static int	ft_count_words(char *str, char c)
 			is_new_word = FALSE;
 		str++;
 	}
-	return count;
+	return (count);
 }
-
 
 static char	*ft_get_end_of_word(char *start, char c)
 {
 	while (*start)
 	{
 		if (*start == c)
-			return start;
+			return (start);
 		start++;
 	}
-	return start;
+	return (start);
 }
 
 /*
@@ -83,10 +82,12 @@ static char	*ft_get_end_of_word(char *start, char c)
 int	main(void)
 {
 	char	**result;
+	char	sep;
+	int		word_count;
 
 	char test[] = "*******hello*world****hjflhf**********";
-	char sep = '*';
-	int word_count = ft_count_words(test, sep);
+	sep = '*';
+	word_count = ft_count_words(test, sep);
 	result = ft_split(test, sep);
 	printf("%i words :\n", word_count);
 	for (int i = 0; result[i]; i++)
