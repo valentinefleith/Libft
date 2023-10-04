@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:34:40 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/04 10:59:03 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/10/04 16:35:53 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ char	**ft_split(char const *s, char c)
 	char	*start;
 	int		count;
 	char	*end;
-	int		word_count;
 
-	word_count = ft_count_words((char *)s, c);
-	strs = malloc((1 + word_count * sizeof(char *)));
+	strs = malloc((1 + ft_count_words((char *)s, c) * sizeof(char *)));
 	if (strs == NULL)
 		return (NULL);
 	while (*s == c)
