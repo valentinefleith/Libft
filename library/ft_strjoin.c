@@ -14,21 +14,22 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *joined_strs;
-	size_t joined_length;
-	
+	char	*joined_strs;
+	size_t	joined_length;
+
 	joined_length = 1 + ft_strlen(s1) + ft_strlen(s2);
 	joined_strs = malloc(joined_length * sizeof(char));
 	if (joined_strs == NULL)
-		return NULL;
+		return (NULL);
 	ft_strlcpy(joined_strs, s1, ft_strlen(s1) + 1);
 	ft_strlcat(joined_strs, s2, ft_strlen(s2) + 1);
-	return joined_strs;
+	return (joined_strs);
 }
 
 /*
 #include <stdio.h>
-int main(void)
+
+int	main(void)
 {
 	char hello[] = "salut ";
 	char everyone[] = "a tous";
