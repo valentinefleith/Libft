@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:20:16 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/06 15:14:24 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/10/11 10:27:09 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,12 @@ char	*ft_itoa(int n)
 		return NULL;
 	if (n < 0)
 	{
-		result[0] = '-';
-		absolute_value = n * -1;
+		*result = '-';
+		result++;
+		absolute_value = -n;
+		result = ft_uitoa(absolute_value, result, size_of_new_str - 1);
+		return result - 1;
+
 	}
 	else
 		absolute_value = n;
@@ -39,12 +43,15 @@ char *ft_uitoa(unsigned int n, char *dest, int size)
 {
 	int index;
 
-	index = 0;
-	while (index < size)
+	index = size - 1;
+	while (index >= 0)
 	{
-
+		dest[index] = (n % 10 + '0');
+		n = n / 10;
+		index--;
 	}
-
+	dest[size] = '\0';
+	return dest;
 		
 }
 
@@ -53,10 +60,19 @@ int ft_find_str_size(int n)
 	int size;
 
 	size = 0;
+	if (n < 0)
+		size++;
 	while (n)
 	{
 		n = n / 10;
 		size++;
 	}
 	return size;
+}
+
+#include <stdio.h>
+int main(void)
+{
+	int number = 42;
+	printf("%s\n", ft_itoa(number));
 }
