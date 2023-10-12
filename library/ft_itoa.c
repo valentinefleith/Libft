@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:20:16 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/11 10:27:09 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/10/12 09:02:40 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,12 @@ int ft_find_str_size(int n)
 	return size;
 }
 
+/*
 #include <stdio.h>
 int main(void)
 {
-	int number = 42;
+	int number = -42;
 	printf("%s\n", ft_itoa(number));
 }
+
+*/
