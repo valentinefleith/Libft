@@ -35,7 +35,7 @@ Libft is the first 42's common core's project. It aims to code a C library regro
 - [x] [`ft_strjoin`](/library/ft_strjoin.c)
 - [x] [`ft_strtrim`](/library/ft_strtrim.c)
 - [x] [`ft_split`](/library/ft_split.c)
-- [ ] `ft_itoa`
+- [x] [`ft_itoa`](/library/ft_itoa.c)
 - [ ] `ft_strmapi`
 - [ ] `ft_striteri`
 - [x] [`ft_putchar_fd`](/library/ft_putchar_fd.c)
