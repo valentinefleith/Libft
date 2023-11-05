@@ -52,5 +52,5 @@ Libft is the first 42's common core's project. It aims to code a C library regro
 - [x] [`ft_lstadd_back`](/library/ft_lstadd_back.c)
 - [x] [`ft_lstdelone`](/library/ft_lstdelone.c)
 - [x] [`ft_lstclear`](/library/ft_lstclear.c)
-- [ ] `ft_lstiter`
+- [x] [`ft_lstiter`](/library/ft_lstiter.c)
 - [ ] `ft_lstmap`
