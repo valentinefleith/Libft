@@ -17,7 +17,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_memset`](/library/ft_memset.c)      | X |     |
 | [`ft_bzero`](/library/ft_bzero.c)        | X |     |
 | [`ft_memcpy`](/library/ft_memcpy.c)      | X |     |
-| [`ft_memmove`](/library/ft_memmove.c)  | X |     |
+| [`ft_memmove`](/library/ft_memmove.c)  |  |     |
 | [`ft_strlcpy`](/library/ft_strlcpy.c)  | X |     |
 | [`ft_strlcat`](/library/ft_strlcat.c)  | X |     |
 | [`ft_toupper`](/library/ft_toupper.c)  | X |     |
@@ -34,26 +34,30 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 
 ## Part 2 : Additional functions
 
-- [x] [`ft_substr`](/library/ft_substr.c)
-- [x] [`ft_strjoin`](/library/ft_strjoin.c)
-- [x] [`ft_strtrim`](/library/ft_strtrim.c)
-- [x] [`ft_split`](/library/ft_split.c)
-- [x] [`ft_itoa`](/library/ft_itoa.c)
-- [x] [`ft_strmapi`](/library/ft_strmapi.c)
-- [x] [`ft_striteri`](/library/ft_striteri.c)
-- [x] [`ft_putchar_fd`](/library/ft_putchar_fd.c)
-- [x] [`ft_putstr_fd`](/library/ft_putstr_fd.c)
-- [x] [`ft_putendl_fd`](/library/ft_putendl_fd.c)
-- [x] [`ft_putnbr_fd`](/library/ft_putnbr_fd.c)
+| Additional functions |    Finished       | Tested     |
+| :--------------- |:---------------| :-----|
+| [`ft_substr`](/library/ft_substr.c) | X |     |
+| [`ft_strjoin`](/library/ft_strjoin.c) | X |     |
+| [`ft_strtrim`](/library/ft_strtrim.c) | X |     |
+| [`ft_split`](/library/ft_split.c) | X |     |
+| [`ft_itoa`](/library/ft_itoa.c) | X |     |
+| [`ft_strmapi`](/library/ft_strmapi.c) | X |     |
+| [`ft_striteri`](/library/ft_striteri.c) | X |     |
+| [`ft_putchar_fd`](/library/ft_putchar_fd.c) | X |     |
+| [`ft_putstr_fd`](/library/ft_putstr_fd.c) | X |     |
+| [`ft_putendl_fd`](/library/ft_putendl_fd.c) | X |     |
+| [`ft_putnbr_fd`](/library/ft_putnbr_fd.c) | X |     |
 
 ## Part 3 : Bonus part (linked lists)
 
-- [x] [`ft_lstnew`](/library/ft_lstnew.c)
-- [x] [`ft_lstadd_front`](/library/ft_lstadd_front.c)
-- [x] [`ft_lstsize`](/library/ft_lstsize.c)
-- [x] [`ft_lstlast`](/library/ft_lstlast.c)
-- [x] [`ft_lstadd_back`](/library/ft_lstadd_back.c)
-- [x] [`ft_lstdelone`](/library/ft_lstdelone.c)
-- [x] [`ft_lstclear`](/library/ft_lstclear.c)
-- [x] [`ft_lstiter`](/library/ft_lstiter.c)
-- [ ] `ft_lstmap`
+| Bonus Part |    Finished       | Tested     |
+| :--------------- |:---------------| :-----|
+| [`ft_lstnew`](/library/ft_lstnew.c) | X |     |
+| [`ft_lstadd_front`](/library/ft_lstadd_front.c) | X |     |
+| [`ft_lstsize`](/library/ft_lstsize.c) | X |     |
+| [`ft_lstlast`](/library/ft_lstlast.c) | X |     |
+| [`ft_lstadd_back`](/library/ft_lstadd_back.c) | X |     |
+| [`ft_lstdelone`](/library/ft_lstdelone.c) | X |     |
+| [`ft_lstclear`](/library/ft_lstclear.c) | X |     |
+| [`ft_lstiter`](/library/ft_lstiter.c) | X |     |
+| [`ft_lstmap`](/library/ft_lstmap.c) |  |     |
