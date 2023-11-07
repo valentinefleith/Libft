@@ -2,6 +2,8 @@
 
 Libft is the first 42's common core's project. It aims to code a C library regrouping usual functions.
 
+Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github.com/vincent-lafouasse/C-tester-Unity) (thank you)
+
 ## Part 1 : Libc functions
 
 - [x] [`ft_isalpha`](/library/ft_isalpha.c)
@@ -54,6 +56,3 @@ Libft is the first 42's common core's project. It aims to code a C library regro
 - [x] [`ft_lstclear`](/library/ft_lstclear.c)
 - [x] [`ft_lstiter`](/library/ft_lstiter.c)
 - [ ] `ft_lstmap`
-
-
-Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github.com/vincent-lafouasse/C-tester-Unity)
