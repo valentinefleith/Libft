@@ -1,8 +1,6 @@
 # My Libft
 
-Libft is the first 42's common core's project.
-
-It aims to code a C library regrouping usual functions.
+Libft is the first 42's common core's project. It aims to code a C library regrouping usual functions.
 
 ## Part 1 : Libc functions
 
