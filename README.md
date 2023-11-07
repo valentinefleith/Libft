@@ -6,30 +6,31 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 
 ## Part 1 : Libc functions
 
-- [x] [`ft_isalpha`](/library/ft_isalpha.c)
-- [x] [`ft_isdigit`](/library/ft_isdigit.c)
-- [x] [`ft_isalnum`](/library/ft_isalnum.c)
-- [x] [`ft_isascii`](/library/ft_isascii.c)
-- [x] [`ft_isprint`](/library/ft_isprint.c)
-- [x] [`ft_strlen`](/library/ft_strlen.c)
-- [x] [`ft_memset`](/library/ft_memset.c)
-- [x] [`ft_bzero`](/library/ft_bzero.c)
-- [x] [`ft_memcpy`](/library/ft_memcpy.c)
-- [x] [`ft_memmove`](/library/ft_memmove.c)
-- [x] [`ft_strlcpy`](/library/ft_strlcpy.c)
-- [x] [`ft_strlcat`](/library/ft_strlcat.c)
-- [x] [`ft_toupper`](/library/ft_toupper.c)
-- [x] [`ft_tolower`](/library/ft_tolower.c)
-- [x] [`ft_strchr`](/library/ft_strchr.c)
-- [x] [`ft_strrchr`](/library/ft_strrchr.c)
-- [x] [`ft_strncmp`](/library/ft_strncmp.c)
-- [x] [`ft_memchr`](/library/ft_memchr.c)
-- [x] [`ft_memcmp`](/library/ft_memcmp.c)
-- [x] [`ft_strnstr`](/library/ft_strnstr.c)
-- [x] [`ft_atoi`](/library/ft_atoi.c)
-
-- [x] [`ft_calloc`](/library/ft_calloc.c)
-- [x] [`ft_strdup`](/library/ft_strdup.c)
+| Libc functions |    Finished       | Tested     |
+| :--------------- |:---------------| :-----|
+| [`ft_isalpha`](/library/ft_isalpha.c) | X |     |
+| [`ft_isdigit`](/library/ft_isdigit.c)  | X | 
+| [`ft_isalnum`](/library/ft_isalnum.c)  | X |     |
+| [`ft_isascii`](/library/ft_isascii.c)  | X |     |
+| [`ft_isprint`](/library/ft_isprint.c)  | X |     |
+| [`ft_strlen`](/library/ft_strlen.c)      | X |     |
+| [`ft_memset`](/library/ft_memset.c)      | X |     |
+| [`ft_bzero`](/library/ft_bzero.c)        | X |     |
+| [`ft_memcpy`](/library/ft_memcpy.c)      | X |     |
+| [`ft_memmove`](/library/ft_memmove.c)  | X |     |
+| [`ft_strlcpy`](/library/ft_strlcpy.c)  | X |     |
+| [`ft_strlcat`](/library/ft_strlcat.c)  | X |     |
+| [`ft_toupper`](/library/ft_toupper.c)  | X |     |
+| [`ft_tolower`](/library/ft_tolower.c)  | X |     |
+| [`ft_strchr`](/library/ft_strchr.c)      | X |     |
+| [`ft_strrchr`](/library/ft_strrchr.c)  | X |     |
+| [`ft_strncmp`](/library/ft_strncmp.c)  | X |     |
+| [`ft_memchr`](/library/ft_memchr.c)      | X |     |
+| [`ft_memcmp`](/library/ft_memcmp.c)      | X |     |
+| [`ft_strnstr`](/library/ft_strnstr.c)  | X |     |
+| [`ft_atoi`](/library/ft_atoi.c) | X |     |
+| [`ft_calloc`](/library/ft_calloc.c) | X |     |
+| [`ft_strdup`](/library/ft_strdup.c) | X |     |
 
 ## Part 2 : Additional functions
 
