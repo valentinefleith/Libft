@@ -35,3 +35,12 @@ clean:
 fclean: clean
 		@echo Cleaning up lib
 		@rm -rf $(LIB)
+
+.PHONY: test
+test: $(LIB)
+	@make -C test
+
+# alias
+
+.PHONY: t
+t: test
