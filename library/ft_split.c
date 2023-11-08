@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:34:40 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/04 16:35:53 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:44:16 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static int	ft_count_words(char *str, char c);
 static char	*ft_get_end_of_word(char *start, char c);
+static void ft_free_all_substr(char **strs, int count);
 
 char	**ft_split(char const *s, char c)
 {
@@ -33,6 +34,11 @@ char	**ft_split(char const *s, char c)
 	{
 		end = ft_get_end_of_word(start, c);
 		strs[count++] = ft_substr(start, 0, end - start);
+		if (strs[count] == NULL)
+		{
+			ft_free_all_substr(strs, count);
+			return NULL;
+		}
 		start = end;
 		while (*start == c)
 			start++;
@@ -72,6 +78,17 @@ static char	*ft_get_end_of_word(char *start, char c)
 		start++;
 	}
 	return (start);
+}
+
+static void ft_free_all_substr(char **strs, int count)
+{
+	int i = 0;
+	while (i < count)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
 }
 
 /*
