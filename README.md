@@ -8,11 +8,11 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 
 | Libc functions |    Finished       | Tested     |
 | :--------------- |:---------------| :-----|
-| [`ft_isalpha`](/library/ft_isalpha.c) | X |     |
-| [`ft_isdigit`](/library/ft_isdigit.c)  | X | 
-| [`ft_isalnum`](/library/ft_isalnum.c)  | X |     |
-| [`ft_isascii`](/library/ft_isascii.c)  | X |     |
-| [`ft_isprint`](/library/ft_isprint.c)  | X |     |
+| [`ft_isalpha`](/library/ft_isalpha.c) | X |  X  |
+| [`ft_isdigit`](/library/ft_isdigit.c)  | X | X |
+| [`ft_isalnum`](/library/ft_isalnum.c)  | X |  X   |
+| [`ft_isascii`](/library/ft_isascii.c)  | X |   X  |
+| [`ft_isprint`](/library/ft_isprint.c)  | X |   X  |
 | [`ft_strlen`](/library/ft_strlen.c)      | X |     |
 | [`ft_memset`](/library/ft_memset.c)      | X |     |
 | [`ft_bzero`](/library/ft_bzero.c)        | X |     |
