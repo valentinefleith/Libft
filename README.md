@@ -13,7 +13,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_isalnum`](/library/ft_isalnum.c)  | X |  X   |
 | [`ft_isascii`](/library/ft_isascii.c)  | X |   X  |
 | [`ft_isprint`](/library/ft_isprint.c)  | X |   X  |
-| [`ft_strlen`](/library/ft_strlen.c)      | X |     |
+| [`ft_strlen`](/library/ft_strlen.c)      | X |  X   |
 | [`ft_memset`](/library/ft_memset.c)      | X |     |
 | [`ft_bzero`](/library/ft_bzero.c)        | X |     |
 | [`ft_memcpy`](/library/ft_memcpy.c)      | X |     |
