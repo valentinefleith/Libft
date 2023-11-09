@@ -14,7 +14,7 @@
 
 static int	ft_count_words(char *str, char c);
 static char	*ft_get_end_of_word(char *start, char c);
-static void ft_free_all_substr(char **strs, int count);
+static void	ft_free_all_substr(char **strs, int count);
 
 char	**ft_split(char const *s, char c)
 {
@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 		if (strs[count] == NULL)
 		{
 			ft_free_all_substr(strs, count);
-			return NULL;
+			return (NULL);
 		}
 		start = end;
 		while (*start == c)
@@ -80,9 +80,11 @@ static char	*ft_get_end_of_word(char *start, char c)
 	return (start);
 }
 
-static void ft_free_all_substr(char **strs, int count)
+static void	ft_free_all_substr(char **strs, int count)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (i < count)
 	{
 		free(strs[i]);
