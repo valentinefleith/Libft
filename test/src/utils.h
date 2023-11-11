@@ -4,6 +4,8 @@
 
 #include <stddef.h>
 
+typedef unsigned char t_byte;
+
 void scramble_array(void* array, size_t size);
 void compare_bytes(t_byte*, t_byte*, size_t size);
 
