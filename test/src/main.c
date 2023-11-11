@@ -18,6 +18,7 @@ void run_test_strlen(void);
 void run_test_tolower(void);
 void run_test_memset(void);
 void run_test_atoi(void);
+void run_test_strncmp(void);
 
 int	main(void)
 {
@@ -26,5 +27,6 @@ int	main(void)
 	run_test_strlen();
 	run_test_memset();
 	run_test_atoi();
+	run_test_strncmp();
 	return (UnityEnd());
 }
