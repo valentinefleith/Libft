@@ -13,33 +13,36 @@ void	setUp(void)
 void	tearDown(void)
 {
 }
-
 /*
-static void	test_atoi(void)
-{
-	TEST_ASSERT_EQUAL_INT(ft_atoi("42"), atoi("42"));
-}
-
-static void test_isfunctions(void)
-{
-	for (int i = -200; i < 200; i++)
-	{
-		TEST_ASSERT_EQUAL_INT((bool)ft_isalpha(i), (bool)isalpha(i));
-		TEST_ASSERT_EQUAL_INT((bool)ft_isdigit(i), (bool)isdigit(i));
-		TEST_ASSERT_EQUAL_INT((bool)ft_isalnum(i), (bool)isalnum(i));
-		TEST_ASSERT_EQUAL_INT((bool)ft_isprint(i), (bool)isprint(i));
-	}
-}
-
-*/
 static void test_strlen(void)
 {
-	TEST_ASSERT_EQUAL_INT(ft_strlen("cfgvbhnjik"), strlen("cfgvbhnjik"));
+	size_t my_result = ft_strlen("");
+	size_t lib_result = strlen("");
+
+	char message[1024];
+	sprintf(message, "Test failed. Libft function returned %lu, but the lib function returned %lu", my_result, lib_result);
+	TEST_ASSERT_TRUE_MESSAGE(my_result == lib_result, message);
+}
+*/
+
+static void test_tolower(void)
+{
+	int my_result;
+	int lib_result;
+
+	for (int i = -1; i < 130; i++)
+	{
+		my_result = ft_tolower(i);
+		lib_result = tolower(i);
+		char message[1024];
+		sprintf(message, "Test failed. Libft function returned %i, but the lib function returned %i", my_result, lib_result);
+		TEST_ASSERT_TRUE_MESSAGE(my_result == lib_result, message);
+	}
 }
 
 int	main(void)
 {
 	UnityBegin("test.c");
-	RUN_TEST(test_strlen);
+	RUN_TEST(test_tolower);
 	return (UnityEnd());
 }

@@ -20,8 +20,8 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_memmove`](/library/ft_memmove.c)  |  |     |
 | [`ft_strlcpy`](/library/ft_strlcpy.c)  | X |     |
 | [`ft_strlcat`](/library/ft_strlcat.c)  | X |     |
-| [`ft_toupper`](/library/ft_toupper.c)  | X |     |
-| [`ft_tolower`](/library/ft_tolower.c)  | X |     |
+| [`ft_toupper`](/library/ft_toupper.c)  | X |   X |
+| [`ft_tolower`](/library/ft_tolower.c)  | X |  X  |
 | [`ft_strchr`](/library/ft_strchr.c)      | X |     |
 | [`ft_strrchr`](/library/ft_strrchr.c)  | X |     |
 | [`ft_strncmp`](/library/ft_strncmp.c)  | X |     |
