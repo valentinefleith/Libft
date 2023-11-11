@@ -14,7 +14,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_isascii`](/library/ft_isascii.c)  | X |   X  |
 | [`ft_isprint`](/library/ft_isprint.c)  | X |   X  |
 | [`ft_strlen`](/library/ft_strlen.c)      | X |  X   |
-| [`ft_memset`](/library/ft_memset.c)      | X |     |
+| [`ft_memset`](/library/ft_memset.c)      | X |  X  |
 | [`ft_bzero`](/library/ft_bzero.c)        | X |     |
 | [`ft_memcpy`](/library/ft_memcpy.c)      | X |     |
 | [`ft_memmove`](/library/ft_memmove.c)  |  |     |
@@ -28,7 +28,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_memchr`](/library/ft_memchr.c)      | X |     |
 | [`ft_memcmp`](/library/ft_memcmp.c)      | X |     |
 | [`ft_strnstr`](/library/ft_strnstr.c)  | X |     |
-| [`ft_atoi`](/library/ft_atoi.c) | X |     |
+| [`ft_atoi`](/library/ft_atoi.c) | X |  X  |
 | [`ft_calloc`](/library/ft_calloc.c) | X |     |
 | [`ft_strdup`](/library/ft_strdup.c) | X |     |
 

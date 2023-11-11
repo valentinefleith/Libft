@@ -17,6 +17,7 @@ void	tearDown(void)
 void run_test_strlen(void);
 void run_test_tolower(void);
 void run_test_memset(void);
+void run_test_atoi(void);
 
 int	main(void)
 {
@@ -24,5 +25,6 @@ int	main(void)
 	run_test_tolower();
 	run_test_strlen();
 	run_test_memset();
+	run_test_atoi();
 	return (UnityEnd());
 }
