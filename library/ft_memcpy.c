@@ -6,13 +6,13 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 22:28:15 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/24 23:19:44 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:23:37 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const char	*src_cpy;
 	char		*dest_cpy;
