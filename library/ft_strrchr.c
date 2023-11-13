@@ -6,13 +6,13 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:33:56 by vafleith          #+#    #+#             */
-/*   Updated: 2023/09/25 00:15:56 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:25:47 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchar(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
