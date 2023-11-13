@@ -15,7 +15,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_isprint`](/library/ft_isprint.c)  | X |   X  |
 | [`ft_strlen`](/library/ft_strlen.c)      | X |  X   |
 | [`ft_memset`](/library/ft_memset.c)      | X |  X  |
-| [`ft_bzero`](/library/ft_bzero.c)        | X |     |
+| [`ft_bzero`](/library/ft_bzero.c)        | X | X   |
 | [`ft_memcpy`](/library/ft_memcpy.c)      | X |     |
 | [`ft_memmove`](/library/ft_memmove.c)  |  |     |
 | [`ft_strlcpy`](/library/ft_strlcpy.c)  | X |     |
@@ -40,7 +40,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_strjoin`](/library/ft_strjoin.c) | X |     |
 | [`ft_strtrim`](/library/ft_strtrim.c) | X |     |
 | [`ft_split`](/library/ft_split.c) | X |     |
-| [`ft_itoa`](/library/ft_itoa.c) | X |     |
+| [`ft_itoa`](/library/ft_itoa.c) | X |  X  |
 | [`ft_strmapi`](/library/ft_strmapi.c) | X |     |
 | [`ft_striteri`](/library/ft_striteri.c) | X |     |
 | [`ft_putchar_fd`](/library/ft_putchar_fd.c) | X |     |

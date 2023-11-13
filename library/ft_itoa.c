@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:20:16 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/12 09:02:40 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:47:06 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 char	*ft_uitoa(unsigned int n, char *dest, int size)
 {
 	int	index;
-
+	
 	index = size - 1;
 	while (index >= 0)
 	{
@@ -56,7 +56,9 @@ char	*ft_uitoa(unsigned int n, char *dest, int size)
 int	ft_find_str_size(int n)
 {
 	int	size;
-
+	
+	if (n == 0)
+		return (1);
 	size = 0;
 	if (n < 0)
 		size++;
@@ -67,7 +69,6 @@ int	ft_find_str_size(int n)
 	}
 	return (size);
 }
-
 /*
 #include <stdio.h>
 
@@ -75,8 +76,7 @@ int	main(void)
 {
 	int	number;
 
-	number = -42;
+	number = 0;
 	printf("%s\n", ft_itoa(number));
 }
-
 */
