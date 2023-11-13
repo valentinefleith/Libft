@@ -6,7 +6,7 @@
 /*   By: val <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 16:46:39 by val               #+#    #+#             */
-/*   Updated: 2023/09/25 22:48:57 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:49:16 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_atoi(const char *str)
 		str++;
 		return (-ft_atoui(str));
 	}
+	if (*str == '+')
+		str++;
 	return (ft_atoui(str));
 }
 
