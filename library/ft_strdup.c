@@ -6,13 +6,13 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 14:26:12 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/14 13:44:25 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:32:26 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*duplicate;
 	size_t	size_of_str_nul;
