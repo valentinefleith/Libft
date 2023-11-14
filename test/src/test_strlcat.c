@@ -3,14 +3,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <ctype.h>
 
-static void try_strlcat()
+static void try_strlcat(char *dest, char *src, size_t size, char *expected)
 {
-
 	char message[1024];
-	sprintf(message, "Test failed. ft_strjoin returned %s, but %s was expected.\n Input s1='%s', s2='%s'\n", result, expected, s1, s2);
-	TEST_ASSERT_TRUE_MESSAGE(result == expected, message);
+	char *cpy = malloc(1024);
+	if (cpy == NULL)
+		return;
+	strcpy(cpy, dest);
+	ft_strlcat(dest, src, size);
+	sprintf(message, "Test failed. ft_strlcat returned dest %s, but %s was expected.\n Input dest='%s', src='%s'\n", dest, expected, cpy, src);
+	TEST_ASSERT_TRUE_MESSAGE(!strcmp(dest, expected), message);
 }
 
 static void test_strlcat(void)
@@ -18,7 +23,10 @@ static void test_strlcat(void)
 	char dest[30];
 	bzero(dest, 30);
 	char src[] = "111111111";
-	try_strlcat(dest, src, 1);
+	dest[0] = 'A';
+	try_strlcat(dest, src, 1, "A");
+	try_strlcat(dest, src, 2, "A1");
+	try_strlcat(dest, src, 5, "A1111");
 }
 
 void run_test_strlcat(void)
