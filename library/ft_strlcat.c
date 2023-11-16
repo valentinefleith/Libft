@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 15:45:07 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/05 17:11:25 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/16 17:13:15 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest_length = ft_strlen(dest);
 	if (!size)
 		return (src_length);
-	if (dest_length >= size)
+	if (size < dest_length)
 		return (src_length + size);
 	while (*dest)
 		dest++;
