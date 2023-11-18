@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <bsd/string.h>
+#include <string.h>
 #include <ctype.h>
 
 
@@ -13,7 +13,7 @@
 static void try_strnstr(const char *big, const char *little, size_t len)
 {
 	char *my_result = ft_strnstr(big, little, len);
-	char *lib_result = strnstr(big, little, len);
+	char *lib_result = strstr(big, little);
 	
 	char message[1024];
 	sprintf(message, "Test failed. Libft function returned %p, but the lib function returned %p", my_result, lib_result);

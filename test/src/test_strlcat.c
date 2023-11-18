@@ -26,7 +26,7 @@ static void test_strlcat(void)
 	dest[0] = 'A';
 	try_strlcat(dest, src, 1, "A");
 	try_strlcat(dest, src, 2, "A1");
-	try_strlcat(dest, src, 5, "A1111");
+	try_strlcat(dest, src, 5, "A11111");
 }
 
 void run_test_strlcat(void)

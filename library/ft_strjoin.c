@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 18:58:48 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/05 17:12:27 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/18 10:49:23 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(joined_strs, s2, ft_strlen(s2) + 1);
 	return (joined_strs);
 }
-
 /*
 #include <stdio.h>
 
