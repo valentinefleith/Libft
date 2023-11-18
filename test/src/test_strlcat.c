@@ -14,7 +14,7 @@ static void try_strlcat(char *dest, char *src, size_t size, char *expected)
 		return;
 	strcpy(cpy, dest);
 	ft_strlcat(dest, src, size);
-	sprintf(message, "Test failed. ft_strlcat returned dest %s, but %s was expected.\n Input dest='%s', src='%s'\n", dest, expected, cpy, src);
+	sprintf(message, "Test failed. ft_strlcat returned dest '%s', but '%s' was expected.\n Input dest='%s', src='%s'\n", dest, expected, cpy, src);
 	TEST_ASSERT_TRUE_MESSAGE(!strcmp(dest, expected), message);
 }
 
@@ -25,8 +25,8 @@ static void test_strlcat(void)
 	char src[] = "111111111";
 	dest[0] = 'A';
 	try_strlcat(dest, src, 1, "A");
-	try_strlcat(dest, src, 2, "A1");
-	try_strlcat(dest, src, 5, "A11111");
+	try_strlcat(dest, src, 2, "A");
+	try_strlcat(dest, src, 5, "A111");
 }
 
 void run_test_strlcat(void)
