@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 15:45:07 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/16 17:13:15 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:21:40 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,20 @@
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	src_length;
+
 	size_t	dest_length;
 	size_t	count;
 
 	src_length = ft_strlen(src);
 	dest_length = ft_strlen(dest);
-	if (!size)
-		return (src_length);
-	if (size < dest_length)
+	if (size < dest_length || size < 1)
 		return (src_length + size);
-	while (*dest)
-		dest++;
 	count = 0;
+	while (*dest)
+	{
+		dest++;
+		count++;
+	}
 	while (*src && count < size - 1)
 	{
 		*dest = *src;
