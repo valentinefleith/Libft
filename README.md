@@ -18,11 +18,11 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_bzero`](/library/ft_bzero.c)        | X | X   |
 | [`ft_memcpy`](/library/ft_memcpy.c)      | X |     |
 | [`ft_memmove`](/library/ft_memmove.c)  |  |     |
-| [`ft_strlcpy`](/library/ft_strlcpy.c)  | X |     |
-| [`ft_strlcat`](/library/ft_strlcat.c)  | X |     |
+| [`ft_strlcpy`](/library/ft_strlcpy.c)  | X |  X  |
+| [`ft_strlcat`](/library/ft_strlcat.c)  | X |  X  |
 | [`ft_toupper`](/library/ft_toupper.c)  | X |   X |
 | [`ft_tolower`](/library/ft_tolower.c)  | X |  X  |
-| [`ft_strchr`](/library/ft_strchr.c)      | X |     |
+| [`ft_strchr`](/library/ft_strchr.c)      | X |  X  |
 | [`ft_strrchr`](/library/ft_strrchr.c)  | X |     |
 | [`ft_strncmp`](/library/ft_strncmp.c)  | X |   X |
 | [`ft_memchr`](/library/ft_memchr.c)      | X |     |
