@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:33:56 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/13 22:12:41 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:13:45 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s) - 1;
-	while (i >= 0 && s[i] != c)
+	if (!c)
+		return ((char *)s + ft_strlen(s));
+	while (i >= 0 && s[i] != (unsigned char)c)
 		i--;
-	if (s[i] == c)
+	if (s[i] == (unsigned char)c)
 		return ((char *)(s + i));
 	return (NULL);
 }

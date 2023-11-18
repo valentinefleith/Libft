@@ -23,9 +23,9 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_toupper`](/library/ft_toupper.c)  | X |   X |
 | [`ft_tolower`](/library/ft_tolower.c)  | X |  X  |
 | [`ft_strchr`](/library/ft_strchr.c)      | X |  X  |
-| [`ft_strrchr`](/library/ft_strrchr.c)  | X |     |
+| [`ft_strrchr`](/library/ft_strrchr.c)  | X |  X  |
 | [`ft_strncmp`](/library/ft_strncmp.c)  | X |   X |
-| [`ft_memchr`](/library/ft_memchr.c)      | X |     |
+| [`ft_memchr`](/library/ft_memchr.c)      | X | X   |
 | [`ft_memcmp`](/library/ft_memcmp.c)      | X |     |
 | [`ft_strnstr`](/library/ft_strnstr.c)  | X |     |
 | [`ft_atoi`](/library/ft_atoi.c) | X |  X  |
@@ -43,10 +43,10 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_itoa`](/library/ft_itoa.c) | X |  X  |
 | [`ft_strmapi`](/library/ft_strmapi.c) | X |     |
 | [`ft_striteri`](/library/ft_striteri.c) | X |     |
-| [`ft_putchar_fd`](/library/ft_putchar_fd.c) | X |     |
-| [`ft_putstr_fd`](/library/ft_putstr_fd.c) | X |     |
-| [`ft_putendl_fd`](/library/ft_putendl_fd.c) | X |     |
-| [`ft_putnbr_fd`](/library/ft_putnbr_fd.c) | X |     |
+| [`ft_putchar_fd`](/library/ft_putchar_fd.c) | X |  X  |
+| [`ft_putstr_fd`](/library/ft_putstr_fd.c) | X |   X |
+| [`ft_putendl_fd`](/library/ft_putendl_fd.c) | X | X   |
+| [`ft_putnbr_fd`](/library/ft_putnbr_fd.c) | X |   X |
 
 ## Part 3 : Bonus part (linked lists)
 
