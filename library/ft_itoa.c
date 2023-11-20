@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 char	*ft_uitoa(unsigned int n, char *dest, int size)
 {
 	int	index;
-	
+
 	index = size - 1;
 	while (index >= 0)
 	{
@@ -56,7 +56,7 @@ char	*ft_uitoa(unsigned int n, char *dest, int size)
 int	ft_find_str_size(int n)
 {
 	int	size;
-	
+
 	if (n == 0)
 		return (1);
 	size = 0;
