@@ -16,17 +16,18 @@ int	ft_isalpha(int c)
 }
 
 /*
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	for (int i = 0; i < 127; i++)
 	{
 		if (ft_isalpha(i) == isalpha(i))
 			printf("OK\n");
 		else
-	  		printf("NOT OK\n char = %c\n ft_isalpha tells %i\n but isalpha tells %i\n", i, ft_isalpha(i), isalpha(i));
+			printf("NOT OK\n char = %c\n ft_isalpha tells %i\n but isalpha tells
+				%i\n", i, ft_isalpha(i), isalpha(i));
 	}
 }
 */
