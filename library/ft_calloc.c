@@ -15,8 +15,8 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-	size_t n;
-	
+	size_t	n;
+
 	n = count * size;
 	if (n && (size != n / count))
 		return (NULL);

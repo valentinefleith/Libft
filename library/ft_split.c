@@ -6,21 +6,21 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:34:40 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/21 19:04:27 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/21 22:33:15 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(char const *str, char c);
-static size_t ft_strlen_custom(char *s, char c);
-static void	ft_free_all_substrs(char **strs, int count);
-static char **ft_fill_substrs(char **strs, char *s, int nb_words, char c);
+static int		ft_count_words(char const *str, char c);
+static size_t	ft_strlen_custom(char *s, char c);
+static void		ft_free_all_substrs(char **strs, int count);
+static char		**ft_fill_substrs(char **strs, char *s, int nb_words, char c);
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **strs;
-	int nb_words;
+	char	**strs;
+	int		nb_words;
 
 	if (!s)
 		return (NULL);
@@ -29,33 +29,35 @@ char **ft_split(char const *s, char c)
 	if (!strs)
 		return (NULL);
 	strs = ft_fill_substrs(strs, (char *)s, nb_words, c);
-	return strs;
+	return (strs);
 }
 
-static char **ft_fill_substrs(char **strs, char *s, int nb_words, char c)
+static char	**ft_fill_substrs(char **strs, char *s, int nb_words, char c)
 {
-	int i;
+	int	i;
+	int	j;
 
 	i = 0;
+	j = 0;
 	while (i < nb_words)
 	{
-		if (s[i] != c)
+		if (s[j] != c)
 		{
-			strs[i] = ft_substr(s, i, ft_strlen_custom(s, c));
+			strs[i] = ft_substr(s, j, ft_strlen_custom(s + j, c));
+			i++;
 			if (!strs)
 			{
 				ft_free_all_substrs(strs, nb_words);
-				return NULL;
+				return (NULL);
 			}
-			while (s[i] && s[i] != c)
-				i++;
+			while (s[j] && s[j] != c)
+				j++;
 		}
-		i++;
+		j++;
 	}
 	strs[i] = 0;
-	return strs;
+	return (strs);
 }
-
 
 static int	ft_count_words(char const *str, char c)
 {
@@ -76,10 +78,10 @@ static int	ft_count_words(char const *str, char c)
 	return (count);
 }
 
-static size_t ft_strlen_custom(char *s, char c)
+static size_t	ft_strlen_custom(char *s, char c)
 {
-	size_t size;
-	
+	size_t	size;
+
 	size = 0;
 	while (s[size] && s[size] != c)
 		size++;
