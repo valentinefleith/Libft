@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:34:40 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/21 18:57:15 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/21 19:04:27 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ static void	ft_free_all_substrs(char **strs, int count)
 	}
 	free(strs);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -117,3 +117,4 @@ int	main(void)
 		printf("%s\n", result[i]);
 	}
 }
+*/
