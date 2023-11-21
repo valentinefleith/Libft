@@ -6,81 +6,87 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:34:40 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/18 16:40:04 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:57:15 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(char *str, char c);
-static char	*ft_get_end_of_word(char *start, char c);
-static void	ft_free_all_substr(char **strs, int count);
+static int	ft_count_words(char const *str, char c);
+static size_t ft_strlen_custom(char *s, char c);
+static void	ft_free_all_substrs(char **strs, int count);
+static char **ft_fill_substrs(char **strs, char *s, int nb_words, char c);
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	char	**strs;
-	char	*start;
-	int		count;
-	char	*end;
+	char **strs;
+	int nb_words;
 
-	strs = malloc((1 + ft_count_words((char *)s, c) * sizeof(char *)));
-	if (strs == NULL)
+	if (!s)
 		return (NULL);
-	while (*s == c)
-		s++;
-	start = (char *)s;
-	count = 0;
-	while (count < ft_count_words((char *)s, c) && *start)
-	{
-		end = ft_get_end_of_word(start, c);
-		strs[count++] = ft_substr(start, 0, end - start);
-		if (strs[count] == NULL)
-		{
-			ft_free_all_substr(strs, count);
-			return (NULL);
-		}
-		start = end;
-		while (*start == c)
-			start++;
-	}
-	strs[count] = NULL;
-	return (strs);
+	nb_words = ft_count_words(s, c);
+	strs = ft_calloc(nb_words + 1, sizeof(char *));
+	if (!strs)
+		return (NULL);
+	strs = ft_fill_substrs(strs, (char *)s, nb_words, c);
+	return strs;
 }
 
-static int	ft_count_words(char *str, char c)
+static char **ft_fill_substrs(char **strs, char *s, int nb_words, char c)
+{
+	int i;
+
+	i = 0;
+	while (i < nb_words)
+	{
+		if (s[i] != c)
+		{
+			strs[i] = ft_substr(s, i, ft_strlen_custom(s, c));
+			if (!strs)
+			{
+				ft_free_all_substrs(strs, nb_words);
+				return NULL;
+			}
+			while (s[i] && s[i] != c)
+				i++;
+		}
+		i++;
+	}
+	strs[i] = 0;
+	return strs;
+}
+
+
+static int	ft_count_words(char const *str, char c)
 {
 	int	count;
-	int	is_new_word;
 
-	if (!str)
-		return (0);
 	count = 0;
-	is_new_word = TRUE;
 	while (*str)
 	{
-		if (is_new_word && *str != c)
+		if (*str != c)
+		{
 			count++;
-		if (*str == c)
-			is_new_word = TRUE;
+			while (*str && *str != c)
+				str++;
+		}
 		else
-			is_new_word = FALSE;
-		str++;
+			str++;
 	}
 	return (count);
 }
 
-static char	*ft_get_end_of_word(char *start, char c)
+static size_t ft_strlen_custom(char *s, char c)
 {
-	while (*start)
-	{
-		if (*start == c)
-			return (start);
-		start++;
-	}
-	return (start);
+	size_t size;
+	
+	size = 0;
+	while (s[size] && s[size] != c)
+		size++;
+	return (size);
 }
 
-static void	ft_free_all_substr(char **strs, int count)
+static void	ft_free_all_substrs(char **strs, int count)
 {
 	int	i;
 
@@ -93,7 +99,6 @@ static void	ft_free_all_substr(char **strs, int count)
 	free(strs);
 }
 
-/*
 #include <stdio.h>
 
 int	main(void)
@@ -112,4 +117,3 @@ int	main(void)
 		printf("%s\n", result[i]);
 	}
 }
-*/
