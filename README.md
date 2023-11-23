@@ -37,7 +37,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | Additional functions |    Finished       | Tested     |
 | :--------------- |:---------------| :-----|
 | [`ft_substr`](/library/ft_substr.c) | X |  X  |
-| [`ft_strjoin`](/library/ft_strjoin.c) | X |     |
+| [`ft_strjoin`](/library/ft_strjoin.c) | X |   X |
 | [`ft_strtrim`](/library/ft_strtrim.c) | X |     |
 | [`ft_split`](/library/ft_split.c) | X | X   |
 | [`ft_itoa`](/library/ft_itoa.c) | X |  X  |

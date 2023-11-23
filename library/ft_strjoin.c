@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 18:58:48 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/18 10:49:23 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/23 09:14:41 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (joined_strs == NULL)
 		return (NULL);
 	ft_strlcpy(joined_strs, s1, ft_strlen(s1) + 1);
-	ft_strlcat(joined_strs, s2, ft_strlen(s2) + 1);
+	ft_strlcat(joined_strs, s2, joined_length + 1);
 	return (joined_strs);
 }
 /*
