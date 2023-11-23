@@ -6,38 +6,26 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:20:57 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/20 22:52:40 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/23 09:30:53 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_a_match(char *haystack, char *needle);
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
+	size_t	needle_length;
 
+	needle_length = ft_strlen(needle);
 	i = 0;
-	while (haystack[i] && i + ft_strlen(needle) < len)
+	while (haystack[i] && i + needle_length < len)
 	{
-		if (is_a_match((char *)&haystack[i], (char *)needle))
-			return ((char *)&haystack[i]);
+		if (!ft_strncmp((char *)(haystack + i), needle, needle_length))
+		{
+			return ((char *)(haystack + i));
+		}
 		i++;
 	}
 	return (NULL);
-}
-
-static int	is_a_match(char *haystack, char *needle)
-{
-	while (*needle && *haystack)
-	{
-		if (*needle != *haystack)
-			return (0);
-		needle++;
-		haystack++;
-	}
-	if (!*haystack && *needle)
-		return (0);
-	return (1);
 }

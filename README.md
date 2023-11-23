@@ -27,7 +27,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_strncmp`](/library/ft_strncmp.c)  | X |   X |
 | [`ft_memchr`](/library/ft_memchr.c)      | X | X   |
 | [`ft_memcmp`](/library/ft_memcmp.c)      | X |   X |
-| [`ft_strnstr`](/library/ft_strnstr.c)  | X |     |
+| [`ft_strnstr`](/library/ft_strnstr.c)  | X | X   |
 | [`ft_atoi`](/library/ft_atoi.c) | X |  X  |
 | [`ft_calloc`](/library/ft_calloc.c) | X |  X  |
 | [`ft_strdup`](/library/ft_strdup.c) | X |  X  |
