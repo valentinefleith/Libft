@@ -6,11 +6,12 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 16:18:14 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/26 16:38:02 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/26 17:02:47 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -22,26 +23,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	len = ft_strlen(s1);
-	while (ft_strchr(set, s1[len]))
+	while (ft_strchr(set, s1[len]) && len != start)
 		len--;
-	len -= (start - 1);
-	trimmed = ft_substr(s1, start, len);
+	len -= start;
+	trimmed = ft_substr(s1, start, len + 1);
 	if (!trimmed)
 		return (NULL);
 	return (trimmed);
 }
-/*
-#include <stdio.h>
 
+/*
 int	main(void)
 {
 	char	*trimmed;
 
 	//char hello[] = "      hello \tsalut  ca va    \t";
-	char hello[] = "hello \tsalut  ca va";
+	char hello[] = "     \t";
 	trimmed = ft_strtrim(hello, " \t\n");
 	printf("trying to trim '%s' and remove '%s' characters\n", hello,
-		"*[]/");
+		" \t\n");
 	printf("trimmed : '%s'\n", trimmed);
 }
 */
