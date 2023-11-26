@@ -5,59 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 17:19:03 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/23 10:12:00 by vafleith         ###   ########.fr       */
+/*   Created: 2023/11/26 16:18:14 by vafleith          #+#    #+#             */
+/*   Updated: 2023/11/26 16:38:02 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_get_size_of_trimmed(char const *s1, char const *set);
-static void		ft_strtrcpy(char *dest, char const *s1, char const *set);
-static int ft_to_be_trimmed(int i);
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*trimmed;
+	unsigned int	start;
+	size_t			len;
+	char			*trimmed;
 
-	trimmed = malloc(1 + ft_get_size_of_trimmed(s1, set) * sizeof(char));
-	if (trimmed == NULL)
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	len = ft_strlen(s1);
+	while (ft_strchr(set, s1[len]))
+		len--;
+	len -= (start - 1);
+	trimmed = ft_substr(s1, start, len);
+	if (!trimmed)
 		return (NULL);
-	ft_strtrcpy(trimmed, s1, set);
 	return (trimmed);
 }
-
-static size_t	ft_get_size_of_trimmed(char const *s1, char const *set)
-{
-	size_t	size;
-
-	size = 0;
-	while (*s1)
-	{
-		if (!ft_strchr(set, *s1))
-			size++;
-		s1++;
-	}
-	return (size);
-}
-
-static void	ft_strtrcpy(char *dest, char const *s1, char const *set) // I should use ft_substr here
-{
-	int i;
-
-	i = 0;
-	while (s1[i])
-	{
-		if (!ft_strchr(set, s1[i]) && ft_to_be_trimmed(i))
-		{
-			*dest = s1[i];
-			dest++;
-		}
-		i++;
-	}
-	*dest = '\0';
-}
-
 /*
 #include <stdio.h>
 
@@ -65,9 +37,10 @@ int	main(void)
 {
 	char	*trimmed;
 
-	char hello[] = "hello*[] salut*] [ca* /va*";
-	trimmed = ft_strtrim(hello, "*[]/");
-	printf("trying to trim '%s' and remove all '%s' characters\n", hello,
+	//char hello[] = "      hello \tsalut  ca va    \t";
+	char hello[] = "hello \tsalut  ca va";
+	trimmed = ft_strtrim(hello, " \t\n");
+	printf("trying to trim '%s' and remove '%s' characters\n", hello,
 		"*[]/");
 	printf("trimmed : '%s'\n", trimmed);
 }
