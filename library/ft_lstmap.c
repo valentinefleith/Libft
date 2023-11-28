@@ -6,11 +6,11 @@
 /*   By: vafleith <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:48:06 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/08 09:31:45 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/28 16:27:50 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
