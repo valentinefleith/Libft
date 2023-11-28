@@ -6,15 +6,14 @@
 #    By: vafleith <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/28 11:44:12 by vafleith          #+#    #+#              #
-#    Updated: 2023/11/28 16:22:00 by vafleith         ###   ########.fr        #
+#    Updated: 2023/11/28 16:31:56 by vafleith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC=cc
-CFLAGS= -Wall -Wextra
-#CFLAGS+= -Werror
+CFLAGS= -Wall -Wextra -Werror
 
 LIB_H = libft.h
 
