@@ -17,7 +17,7 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_memset`](/library/ft_memset.c)      | X |  X  |
 | [`ft_bzero`](/library/ft_bzero.c)        | X | X   |
 | [`ft_memcpy`](/library/ft_memcpy.c)      | X |  X  |
-| [`ft_memmove`](/library/ft_memmove.c)  | X |     |
+| [`ft_memmove`](/library/ft_memmove.c)  | X |   X |
 | [`ft_strlcpy`](/library/ft_strlcpy.c)  | X |  X  |
 | [`ft_strlcat`](/library/ft_strlcat.c)  | X |  X  |
 | [`ft_toupper`](/library/ft_toupper.c)  | X |   X |
