@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 09:21:22 by vafleith          #+#    #+#             */
-/*   Updated: 2023/10/04 10:59:11 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/29 17:49:03 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,25 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	index;
+	size_t	s_len;
 
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+	{
+		substr = malloc(1 * sizeof(char));
+		if (!substr)
+			return (NULL);
+		*substr = '\0';
+		return (substr);
+	}
+	if (len > s_len)
+		len = s_len;
+	if (len > s_len - start)
+		len = s_len - start;
 	substr = malloc(1 + len * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
-	index = 0;
-	while (index < len)
-	{
-		substr[index] = s[start];
-		index++;
-		start++;
-	}
-	substr[index] = '\0';
+	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
 
