@@ -11,33 +11,33 @@
 /* ************************************************************************** */
 
 /* The memory areas may overlap.
-* If overlap at the beginning of src = no problem (memcpy)
-* If overlap at the end of src = need to copy backwards
-*
-* Problem occurs if dest > src and dest < src + n
-*/
+ * If overlap at the beginning of src = no problem (memcpy)
+ * If overlap at the end of src = need to copy backwards
+ *
+ * Problem occurs if dest > src and dest < src + n
+ */
 
 #include "libft.h"
 
-static void *ft_rev_cpy(void *dest, const void *src, size_t n);
+static void	*ft_rev_cpy(void *dest, const void *src, size_t n);
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (src == dest)
 		return (dest);
 	if (n)
 	{
 		if (dest > src && dest < src + n)
-			return ft_rev_cpy(dest, src, n);
-		return ft_memcpy(dest, src, n);
+			return (ft_rev_cpy(dest, src, n));
+		return (ft_memcpy(dest, src, n));
 	}
 	return (dest);
 }
 
-static void *ft_rev_cpy(void *dest, const void *src, size_t n)
+static void	*ft_rev_cpy(void *dest, const void *src, size_t n)
 {
-	char *dest_bytes;
-	char *src_bytes;
+	char	*dest_bytes;
+	char	*src_bytes;
 
 	dest_bytes = (char *)dest;
 	src_bytes = (char *)src;
