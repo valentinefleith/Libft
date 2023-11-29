@@ -60,4 +60,4 @@ Testing part comes from Vincent Lafouasse's repo [C-tester-Unity](https://github
 | [`ft_lstdelone`](/library/ft_lstdelone.c) | X |  X  |
 | [`ft_lstclear`](/library/ft_lstclear.c) | X |   X |
 | [`ft_lstiter`](/library/ft_lstiter.c) | X |  X  |
-| [`ft_lstmap`](/library/ft_lstmap.c) | X  |     |
+| [`ft_lstmap`](/library/ft_lstmap.c) | X  |   X |
