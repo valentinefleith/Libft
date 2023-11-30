@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 22:28:15 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/28 17:26:13 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/11/30 11:01:42 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*src_cpy;
 	unsigned char		*dest_cpy;
 	size_t				i;
-
+	
+	if (n == 0 || dest == src)
+		return (dest);
 	i = 0;
 	src_cpy = src;
 	dest_cpy = dest;
