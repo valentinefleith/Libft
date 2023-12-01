@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:20:57 by vafleith          #+#    #+#             */
-/*   Updated: 2023/11/29 12:13:12 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/12/01 22:10:43 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	needle_length;
 
+	if (len == 0 && (!haystack || !needle))
+		return (NULL);
 	needle_length = ft_strlen(needle);
 	if (!needle_length)
 		return ((char *)haystack);
@@ -33,10 +35,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 /*
 #include <stdio.h>
-int main(void)
+
+int	main(void)
 {
+	char	*result;
+
 	char haystack[30] = "abcdef";
-	char *result = ft_strnstr(haystack, "ef", 5);
+	result = ft_strnstr(haystack, "ef", 5);
 	if (result == NULL)
 		printf("OK\n");
 	else
